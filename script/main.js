@@ -87,9 +87,11 @@ document.addEventListener('DOMContentLoaded', function() {
         result2.textContent = '';
         result3.textContent = '';
         scoreText.style.display = 'block';
-        // Hide the restart button and show the start button again
         restartButton.style.display = 'none';
         startButton.style.display = 'block';
+        choices.forEach(choice =>{
+            choice.disabled = true;});
+        })
     });
 
     function getComputerChoice() {
@@ -111,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return "Computer wins!";
         }
     }
-});
+
 
 
 
